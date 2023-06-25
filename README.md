@@ -9,3 +9,5 @@ index.html: this is a html file,that creates the website. in this file,website i
 main.js: this is a javascript file where functions are defined .this is the file where actual math works
 
 style.css: this is a css file,it's main use is to make the website look like a calculator
+
+this three files combined works as web calculator
