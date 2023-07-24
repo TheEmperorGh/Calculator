@@ -2,30 +2,44 @@
 <html>
 <head>
   <title>Scientific Calculator</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div id="calculator">
-    <input type="text" id="result" readonly>
-    <div id="buttons">
-      <button onclick="clearResult()">C</button>
-      <button onclick="deleteChar()">DEL</button>
-      <button onclick="insertChar('7')">7</button>
-      <button onclick="insertChar('8')">8</button>
-      <button onclick="insertChar('9')">9</button>
-      <button onclick="insertChar('/')">/</button>
-      <button onclick="insertChar('4')">4</button>
-      <button onclick="insertChar('5')">5</button>
-      <button onclick="insertChar('6')">6</button>
-      <button onclick="insertChar('*')">*</button>
-      <button onclick="insertChar('1')">1</button>
-      <button onclick="insertChar('2')">2</button>
-      <button onclick="insertChar('3')">3</button>
-      <button onclick="insertChar('-')">-</button>
-      <button onclick="insertChar('0')">0</button>
-      <button onclick="insertChar('.')">.</button>
-      <button onclick="calculate()">=</button>
-      <button onclick="insertChar('+')">+</button>
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+      <button class="number" onclick="clearDisplay()">C</button>
+      <button class="number" onclick="deleteLastChar()">&#9003;</button>
+      <button class="number" onclick="appendOperator('^')">^</button>
+      <button class="number" onclick="appendOperator('/')">&#247;</button>
+      <button class="number" onclick="appendNumber('7')">7</button>
+      <button class="number" onclick="appendNumber('8')">8</button>
+      <button class="number" onclick="appendNumber('9')">9</button>
+      <button class="number" onclick="appendOperator('*')">&#215;</button>
+      <button class="number" onclick="appendNumber('4')">4</button>
+      <button class="number" onclick="appendNumber('5')">5</button>
+      <button class="number" onclick="appendNumber('6')">6</button>
+      <button class="number" onclick="appendOperator('-')">-</button>
+      <button class="number" onclick="appendNumber('1')">1</button>
+      <button class="number" onclick="appendNumber('2')">2</button>
+      <button class="number" onclick="appendNumber('3')">3</button>
+      <button class="number" onclick="appendOperator('+')">+</button>
+      <button class="number" onclick="appendNumber('0')">0</button>
+      <button class="number" onclick="appendDecimal('.')">.</button>
+      <button class="number" onclick="calculate()">=</button>
+    </div>
+    <div class="functions">
+      <button class="function" onclick="appendFunction('sin')">sin</button>
+      <button class="function" onclick="appendFunction('cos')">cos</button>
+      <button class="function" onclick="appendFunction('tan')">tan</button>
+      <button class="function" onclick="appendFunction('log')">log</button>
+      <button class="function" onclick="appendFunction('sqrt')">√</button>
+      <button class="function" onclick="appendFunction('abs')">|x|</button>
     </div>
   </div>
 
