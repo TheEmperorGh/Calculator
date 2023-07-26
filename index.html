@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Scientific Calculator</title>
+  <title>Advanced Scientific Calculator</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -25,19 +25,14 @@
       <button class="number" onclick="appendNumber('3')">3</button>
       <button class="number" onclick="appendOperator('+')">+</button>
       <button class="number" onclick="appendNumber('0')">0</button>
+      <button class="number" onclick="inverse()">1/x</button>
+      <button class="number" onclick="pi()">π</button>
       <button class="number" onclick="appendDecimal('.')">.</button>
       <button class="number" onclick="calculate()">=</button>
-    </div>
-    <div class="functions">
-      <button class="function" onclick="appendFunction('sin')">sin</button>
-      <button class="function" onclick="appendFunction('cos')">cos</button>
-      <button class="function" onclick="appendFunction('tan')">tan</button>
-      <button class="function" onclick="appendFunction('log')">log</button>
-      <button class="function" onclick="appendFunction('sqrt')">√</button>
-      <button class="function" onclick="appendFunction('abs')">|x|</button>
-    </div>
   </div>
-
+  <div>
+  <p><a href="https://www.facebook.com/EmperorST72">&copy; Md Mazharul Islam Samrat</a></p>
+  </div>
   <script src="main.js"></script>
 </body>
 </html>
