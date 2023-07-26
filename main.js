@@ -10,16 +10,13 @@ function appendOperator(operator) {
   updateDisplay();
 }
 
-function appendFunction(func) {
-  currentExpression += func + '(';
-  updateDisplay();
-}
-
 function appendDecimal() {
   if (currentExpression !== '' && !currentExpression.includes('.')) {
     currentExpression += '.';
-    updateDisplay();
+  } else if (currentExpression === '') {
+    currentExpression = '0.';
   }
+  updateDisplay();
 }
 
 function clearDisplay() {
@@ -46,3 +43,12 @@ function calculate() {
   }
 }
 
+function inverse() {
+  currentExpression = `1/(${currentExpression})`;
+  calculate();
+}
+
+function pi() {
+  currentExpression += Math.PI;
+  updateDisplay();
+}
